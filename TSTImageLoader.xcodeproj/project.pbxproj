@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		942553BF1ECEEEE1003D340C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942553BE1ECEEEE1003D340C /* AppDelegate.swift */; };
 		942553C61ECEEEE1003D340C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 942553C51ECEEEE1003D340C /* Assets.xcassets */; };
-		942553C91ECEEEE1003D340C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 942553C71ECEEEE1003D340C /* LaunchScreen.storyboard */; };
 		942553D41ECEEEE1003D340C /* TSTImageLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942553D31ECEEEE1003D340C /* TSTImageLoaderTests.swift */; };
 		942553E11ECEEF0A003D340C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 942553DF1ECEEF0A003D340C /* Main.storyboard */; };
 		942553E21ECEEF0A003D340C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942553E01ECEEF0A003D340C /* ViewController.swift */; };
@@ -29,11 +28,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		940421961ECF2EB900DDB770 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		940421A31ECF2FCC00DDB770 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		942553BB1ECEEEE1003D340C /* TSTImageLoader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TSTImageLoader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		942553BE1ECEEEE1003D340C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		942553C51ECEEEE1003D340C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		942553C81ECEEEE1003D340C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		942553CA1ECEEEE1003D340C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		942553CF1ECEEEE1003D340C /* TSTImageLoaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TSTImageLoaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		942553D31ECEEEE1003D340C /* TSTImageLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSTImageLoaderTests.swift; sourceTree = "<group>"; };
 		942553D51ECEEEE1003D340C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -62,6 +61,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		940421951ECF2E8500DDB770 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				940421A31ECF2FCC00DDB770 /* LaunchScreen.storyboard */,
+				940421961ECF2EB900DDB770 /* Info.plist */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
 		942553B21ECEEEE1003D340C = {
 			isa = PBXGroup;
 			children = (
@@ -85,10 +93,9 @@
 			children = (
 				942553BE1ECEEEE1003D340C /* AppDelegate.swift */,
 				942553C51ECEEEE1003D340C /* Assets.xcassets */,
-				942553CA1ECEEEE1003D340C /* Info.plist */,
-				942553C71ECEEEE1003D340C /* LaunchScreen.storyboard */,
-				942553DE1ECEEEEA003D340C /* ViewController */,
 				942553ED1ECF2373003D340C /* ImageDownloader.swift */,
+				940421951ECF2E8500DDB770 /* SupportFiles */,
+				942553DE1ECEEEEA003D340C /* ViewController */,
 			);
 			path = TSTImageLoader;
 			sourceTree = "<group>";
@@ -171,11 +178,11 @@
 				TargetAttributes = {
 					942553BA1ECEEEE1003D340C = {
 						CreatedOnToolsVersion = 8.3.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					942553CE1ECEEEE1003D340C = {
 						CreatedOnToolsVersion = 8.3.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 						TestTargetID = 942553BA1ECEEEE1003D340C;
 					};
 				};
@@ -185,8 +192,6 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
-				Base,
 			);
 			mainGroup = 942553B21ECEEEE1003D340C;
 			productRefGroup = 942553BC1ECEEEE1003D340C /* Products */;
@@ -205,7 +210,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				942553E11ECEEF0A003D340C /* Main.storyboard in Resources */,
-				942553C91ECEEEE1003D340C /* LaunchScreen.storyboard in Resources */,
 				942553C61ECEEEE1003D340C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,17 +254,6 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		942553C71ECEEEE1003D340C /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				942553C81ECEEEE1003D340C /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		942553D61ECEEEE1003D340C /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -303,7 +296,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -347,7 +340,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -359,10 +352,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = TSTImageLoader/Info.plist;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = TSTImageLoader/SupportFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vobertynskyi.TSTImageLoader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -371,10 +366,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = TSTImageLoader/Info.plist;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = TSTImageLoader/SupportFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vobertynskyi.TSTImageLoader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -384,10 +381,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TSTImageLoaderTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vobertynskyi.TSTImageLoaderTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TSTImageLoader.app/TSTImageLoader";
 			};
@@ -398,10 +397,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TSTImageLoaderTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vobertynskyi.TSTImageLoaderTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TSTImageLoader.app/TSTImageLoader";
 			};
@@ -426,6 +427,7 @@
 				942553DA1ECEEEE1003D340C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		942553DB1ECEEEE1003D340C /* Build configuration list for PBXNativeTarget "TSTImageLoaderTests" */ = {
 			isa = XCConfigurationList;
@@ -434,6 +436,7 @@
 				942553DD1ECEEEE1003D340C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

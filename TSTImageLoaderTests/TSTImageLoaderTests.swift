@@ -9,28 +9,35 @@
 import XCTest
 @testable import TSTImageLoader
 
-class TSTImageLoaderTests: XCTestCase {
+class MainTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        
         super.tearDown()
     }
     
     func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+        
+        let expect = expectation(description: "...")
+        
+        let imageDownloader = ImageDownloader()
+        
+        let model = ImageModel(imageUrl: "http://loremflickr.com/320/240/moon?randome=1")
+        
+        imageDownloader.downloadImage(with: model) {
+            
+            expect.fulfill()
+            let image = model.loadFileFromCache()
+            XCTAssertNotNil(image, "Download image was failed")
+            XCTAssertEqual(image?.size, CGSize(width: 320, height: 240))
+        }
+        
+        waitForExpectations(timeout: 30) { error in
+            print(error?.localizedDescription ?? "")
         }
     }
-    
 }
